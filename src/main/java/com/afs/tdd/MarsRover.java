@@ -20,7 +20,6 @@ public class MarsRover {
         } else if (command.equals("R")) {
             turnRight();
         }
-        getStatus();
     }
 
     private void move() {
@@ -42,7 +41,7 @@ public class MarsRover {
             this.direction = "E";
         } else if (direction.equals("E")) {
             this.direction = "N";
-        }   else if (direction.equals("W")) {
+        } else if (direction.equals("W")) {
             this.direction = "S";
         }
     }
