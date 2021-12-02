@@ -105,7 +105,7 @@ public class MarsRoverTest {
     @Test
     void should_direction_become_W_when_execute_command_given_direction_S_and_command_L () {
         // given
-        MarsRover marsRover = new MarsRover(0, 0, "W");
+        MarsRover marsRover = new MarsRover(0, 0, "S");
         String command = "L";
 
         // when
@@ -113,7 +113,7 @@ public class MarsRoverTest {
         String result = marsRover.getStatus();
 
         // then
-        assertEquals("0 0 S", result);
+        assertEquals("0 0 E", result);
     }
 
     @Test
