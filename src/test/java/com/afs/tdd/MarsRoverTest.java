@@ -131,7 +131,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    void should_direction_become_S_when_execute_command_given_direction_W_and_command_R () {
+    void should_direction_become_W_when_execute_command_given_direction_S_and_command_R () {
         // given
         MarsRover marsRover = new MarsRover(0, 0, "S");
         String command = "R";
@@ -145,7 +145,7 @@ public class MarsRoverTest {
     }
 
     @Test
-    void should_direction_become_E_when_execute_command_given_direction_S_and_command_R () {
+    void should_direction_become_S_when_execute_command_given_direction_E_and_command_R () {
         // given
         MarsRover marsRover = new MarsRover(0, 0, "E");
         String command = "R";
@@ -156,5 +156,19 @@ public class MarsRoverTest {
 
         // then
         assertEquals("0 0 S", result);
+    }
+
+    @Test
+    void should_direction_become_N_when_execute_command_given_direction_W_and_command_R () {
+        // given
+        MarsRover marsRover = new MarsRover(0, 0, "W");
+        String command = "R";
+
+        // when
+        marsRover.executeCommand(command);
+        String result = marsRover.getStatus();
+
+        // then
+        assertEquals("0 0 N", result);
     }
 }
