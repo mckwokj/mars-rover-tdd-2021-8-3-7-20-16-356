@@ -27,6 +27,8 @@ public class MarsRover {
             this.locationY++;
         } else if (direction.equals("S")) {
             this.locationY--;
+        } else if (direction.equals("E")) {
+            this.locationX++;
         }
     }
 
