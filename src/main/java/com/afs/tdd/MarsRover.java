@@ -54,7 +54,7 @@ public class MarsRover {
 
     private void turnRight() {
         if (direction.equals("N")) {
-            this.direction = "";
+            this.direction = "E";
         }
     }
 
