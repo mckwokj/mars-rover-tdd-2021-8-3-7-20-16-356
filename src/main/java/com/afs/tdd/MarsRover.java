@@ -11,40 +11,16 @@ public class MarsRover {
         this.direction = direction;
     }
 
-    public int getLocationX() {
-        return locationX;
-    }
-
-    public void setLocationX(int locationX) {
-        this.locationX = locationX;
-    }
-
-    public int getLocationY() {
-        return locationY;
-    }
-
-    public void setLocationY(int locationY) {
-        this.locationY = locationY;
-    }
-
-    public String getDirection() {
-        return direction;
-    }
-
-    public void setDirection(String direction) {
-        this.direction = direction;
-    }
-
     public void executeCommand(String command) {
         move();
         getStatus();
     }
 
-    public void move() {
+    private void move() {
         this.locationY++;
     }
 
     public String getStatus() {
-        return null;
+        return String.format("%d %d %s", locationX, locationY, direction);
     }
 }
