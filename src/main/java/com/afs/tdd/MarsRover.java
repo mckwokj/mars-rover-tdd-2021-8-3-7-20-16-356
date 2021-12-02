@@ -1,6 +1,12 @@
 package com.afs.tdd;
 
 public class MarsRover {
+
+    enum Direction {
+        N, E, S, W
+    }
+
+
     private int locationX;
     private int locationY;
     private String direction;
@@ -12,12 +18,14 @@ public class MarsRover {
     }
 
     public void executeCommand(String command) {
-        move();
+        move("N");
         getStatus();
     }
 
-    private void move() {
-        this.locationY++;
+    private void move(String direction) {
+        if (direction.equals("N")) {
+            this.locationY++;
+        }
     }
 
     public String getStatus() {
