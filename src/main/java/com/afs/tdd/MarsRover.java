@@ -60,7 +60,7 @@ public class MarsRover {
         } else if (direction.equals("E")) {
             this.direction = "S";
         } else if (direction.equals("W")) {
-            this.direction = "";
+            this.direction = "N";
         }
     }
 
