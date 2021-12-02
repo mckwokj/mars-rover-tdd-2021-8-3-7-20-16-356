@@ -18,13 +18,15 @@ public class MarsRover {
     }
 
     public void executeCommand(String command) {
-        move("N");
+        move();
         getStatus();
     }
 
-    private void move(String direction) {
+    private void move() {
         if (direction.equals("N")) {
             this.locationY++;
+        } else if (direction.equals("S")) {
+            this.locationY--;
         }
     }
 
