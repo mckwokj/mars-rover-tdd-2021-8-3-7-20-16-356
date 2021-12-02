@@ -18,7 +18,11 @@ public class MarsRover {
     }
 
     public void executeCommand(String command) {
-        move();
+        if (command.equals("M")) {
+            move();
+        } else if (command.equals("L")) {
+            turnLeft();
+        }
         getStatus();
     }
 
@@ -32,6 +36,10 @@ public class MarsRover {
         } else if (direction.equals("W")) {
             this.locationX--;
         }
+    }
+
+    private void turnLeft() {
+        this.direction = "W";
     }
 
     public String getStatus() {
