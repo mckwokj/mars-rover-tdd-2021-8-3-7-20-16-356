@@ -115,4 +115,18 @@ public class MarsRoverTest {
         // then
         assertEquals("0 0 S", result);
     }
+
+    @Test
+    void should_direction_become_E_when_execute_command_given_direction_N_and_command_R () {
+        // given
+        MarsRover marsRover = new MarsRover(0, 0, "N");
+        String command = "R";
+
+        // when
+        marsRover.executeCommand(command);
+        String result = marsRover.getStatus();
+
+        // then
+        assertEquals("0 0 E", result);
+    }
 }
