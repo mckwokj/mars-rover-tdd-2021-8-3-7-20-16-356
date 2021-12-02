@@ -2,11 +2,6 @@ package com.afs.tdd;
 
 public class MarsRover {
 
-    enum Direction {
-        N, E, S, W
-    }
-
-
     private int locationX;
     private int locationY;
     private String direction;
