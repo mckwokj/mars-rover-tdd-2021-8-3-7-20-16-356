@@ -1,8 +1,6 @@
 package com.afs.tdd;
 
-enum Direction {
-    N, E, S, W;
-}
+import enums.Direction;
 
 public class MarsRover {
 
