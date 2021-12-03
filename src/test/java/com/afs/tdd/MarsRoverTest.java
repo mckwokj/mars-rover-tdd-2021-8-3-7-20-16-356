@@ -7,7 +7,7 @@ public class MarsRoverTest {
     @Test
     void should_locationY_add_one_space_when_execute_commands_given_direction_N_and_command_M () {
         // given
-        MarsRover marsRover = new MarsRover(0, 0, "N");
+        MarsRover marsRover = new MarsRover(0, 0, Direction.N);
         String command = "M";
 
         // when
@@ -21,7 +21,7 @@ public class MarsRoverTest {
     @Test
     void should_locationY_add_one_space_when_execute_commands_given_direction_S_and_command_M () {
         // given
-        MarsRover marsRover = new MarsRover(0, 0, "S");
+        MarsRover marsRover = new MarsRover(0, 0, Direction.S);
         String command = "M";
 
         // when
@@ -35,7 +35,7 @@ public class MarsRoverTest {
     @Test
     void should_locationY_add_one_space_when_execute_commands_given_direction_E_and_command_M () {
         // given
-        MarsRover marsRover = new MarsRover(0, 0, "E");
+        MarsRover marsRover = new MarsRover(0, 0, Direction.E);
         String command = "M";
 
         // when
@@ -49,7 +49,7 @@ public class MarsRoverTest {
     @Test
     void should_locationY_add_one_space_when_execute_commands_given_direction_W_and_command_M () {
         // given
-        MarsRover marsRover = new MarsRover(0, 0, "W");
+        MarsRover marsRover = new MarsRover(0, 0, Direction.W);
         String command = "M";
 
         // when
@@ -63,7 +63,7 @@ public class MarsRoverTest {
     @Test
     void should_direction_become_W_when_execute_commands_given_direction_N_and_command_L () {
         // given
-        MarsRover marsRover = new MarsRover(0, 0, "N");
+        MarsRover marsRover = new MarsRover(0, 0, Direction.N);
         String command = "L";
 
         // when
@@ -77,7 +77,7 @@ public class MarsRoverTest {
     @Test
     void should_direction_become_E_when_execute_commands_given_direction_S_and_command_L () {
         // given
-        MarsRover marsRover = new MarsRover(0, 0, "S");
+        MarsRover marsRover = new MarsRover(0, 0, Direction.S);
         String command = "L";
 
         // when
@@ -91,7 +91,7 @@ public class MarsRoverTest {
     @Test
     void should_direction_become_N_when_execute_commands_given_direction_E_and_command_L () {
         // given
-        MarsRover marsRover = new MarsRover(0, 0, "E");
+        MarsRover marsRover = new MarsRover(0, 0, Direction.E);
         String command = "L";
 
         // when
@@ -105,7 +105,7 @@ public class MarsRoverTest {
     @Test
     void should_direction_become_S_when_execute_commands_given_direction_W_and_command_L () {
         // given
-        MarsRover marsRover = new MarsRover(0, 0, "W");
+        MarsRover marsRover = new MarsRover(0, 0, Direction.W);
         String command = "L";
 
         // when
@@ -119,7 +119,7 @@ public class MarsRoverTest {
     @Test
     void should_direction_become_E_when_execute_commands_given_direction_N_and_command_R () {
         // given
-        MarsRover marsRover = new MarsRover(0, 0, "N");
+        MarsRover marsRover = new MarsRover(0, 0, Direction.N);
         String command = "R";
 
         // when
@@ -133,7 +133,7 @@ public class MarsRoverTest {
     @Test
     void should_direction_become_W_when_execute_commands_given_direction_S_and_command_R () {
         // given
-        MarsRover marsRover = new MarsRover(0, 0, "S");
+        MarsRover marsRover = new MarsRover(0, 0, Direction.S);
         String command = "R";
 
         // when
@@ -147,7 +147,7 @@ public class MarsRoverTest {
     @Test
     void should_direction_become_S_when_execute_commands_given_direction_E_and_command_R () {
         // given
-        MarsRover marsRover = new MarsRover(0, 0, "E");
+        MarsRover marsRover = new MarsRover(0, 0, Direction.E);
         String command = "R";
 
         // when
@@ -161,7 +161,7 @@ public class MarsRoverTest {
     @Test
     void should_direction_become_N_when_execute_commands_given_direction_W_and_command_R () {
         // given
-        MarsRover marsRover = new MarsRover(0, 0, "W");
+        MarsRover marsRover = new MarsRover(0, 0, Direction.W);
         String command = "R";
 
         // when
@@ -175,7 +175,7 @@ public class MarsRoverTest {
     @Test
     void should_return_final_result_when_execute_commands_given_batches_of_instructions () {
         // given
-        MarsRover marsRover = new MarsRover(0, 0, "N");
+        MarsRover marsRover = new MarsRover(0, 0, Direction.N);
         String commands = "MLMR";
 
         // when

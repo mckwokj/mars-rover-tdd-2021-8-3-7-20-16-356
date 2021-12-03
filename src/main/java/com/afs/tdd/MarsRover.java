@@ -1,12 +1,16 @@
 package com.afs.tdd;
 
+enum Direction {
+    N, E, S, W;
+}
+
 public class MarsRover {
 
     private int locationX;
     private int locationY;
-    private String direction;
+    private Direction direction; // better to use enum
 
-    public MarsRover(int locationX, int locationY, String direction) {
+    public MarsRover(int locationX, int locationY, Direction direction) {
         this.locationX = locationX;
         this.locationY = locationY;
         this.direction = direction;
@@ -29,38 +33,53 @@ public class MarsRover {
     }
 
     private void move() {
-        if (direction.equals("N")) {
-            this.locationY++;
-        } else if (direction.equals("S")) {
-            this.locationY--;
-        } else if (direction.equals("E")) {
-            this.locationX++;
-        } else if (direction.equals("W")) {
-            this.locationX--;
+        switch(direction) {
+            case N:
+                this.locationY++;
+                break;
+            case S:
+                this.locationY--;
+                break;
+            case E:
+                this.locationX++;
+                break;
+            case W:
+                this.locationX--;
+                break;
         }
     }
 
     private void turnLeft() {
-        if (direction.equals("N")) {
-            this.direction = "W";
-        } else if (direction.equals("S")) {
-            this.direction = "E";
-        } else if (direction.equals("E")) {
-            this.direction = "N";
-        } else if (direction.equals("W")) {
-            this.direction = "S";
+        switch(direction) {
+            case N:
+                this.direction = Direction.W;
+                break;
+            case S:
+                this.direction = Direction.E;
+                break;
+            case E:
+                this.direction = Direction.N;
+                break;
+            case W:
+                this.direction = Direction.S;
+                break;
         }
     }
 
     private void turnRight() {
-        if (direction.equals("N")) {
-            this.direction = "E";
-        } else if (direction.equals("S")) {
-            this.direction = "W";
-        } else if (direction.equals("E")) {
-            this.direction = "S";
-        } else if (direction.equals("W")) {
-            this.direction = "N";
+        switch(direction) {
+            case N:
+                this.direction = Direction.E;
+                break;
+            case S:
+                this.direction = Direction.W;
+                break;
+            case E:
+                this.direction = Direction.S;
+                break;
+            case W:
+                this.direction = Direction.N;
+                break;
         }
     }
 
