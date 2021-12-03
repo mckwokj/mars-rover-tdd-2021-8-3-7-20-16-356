@@ -31,11 +31,12 @@ public class MarsRover {
     }
 
     private void move() {
-        switch(direction) {
+        switch(direction) { // add default
             case N: this.locationY++; break;
             case S: this.locationY--; break;
             case E: this.locationX++; break;
             case W: this.locationX--; break;
+            default: System.out.println("Unexpected input"); break;
         }
     }
 
@@ -45,6 +46,7 @@ public class MarsRover {
             case S: this.direction = Direction.E; break;
             case E: this.direction = Direction.N; break;
             case W: this.direction = Direction.S; break;
+            default: System.out.println("Unexpected input"); break;
         }
     }
 
@@ -54,6 +56,7 @@ public class MarsRover {
             case S: this.direction = Direction.W; break;
             case E: this.direction = Direction.S; break;
             case W: this.direction = Direction.N; break;
+            default: System.out.println("Unexpected input"); break;
         }
     }
 
