@@ -34,52 +34,28 @@ public class MarsRover {
 
     private void move() {
         switch(direction) {
-            case N:
-                this.locationY++;
-                break;
-            case S:
-                this.locationY--;
-                break;
-            case E:
-                this.locationX++;
-                break;
-            case W:
-                this.locationX--;
-                break;
+            case N: this.locationY++; break;
+            case S: this.locationY--; break;
+            case E: this.locationX++; break;
+            case W: this.locationX--; break;
         }
     }
 
     private void turnLeft() {
         switch(direction) {
-            case N:
-                this.direction = Direction.W;
-                break;
-            case S:
-                this.direction = Direction.E;
-                break;
-            case E:
-                this.direction = Direction.N;
-                break;
-            case W:
-                this.direction = Direction.S;
-                break;
+            case N: this.direction = Direction.W; break;
+            case S: this.direction = Direction.E; break;
+            case E: this.direction = Direction.N; break;
+            case W: this.direction = Direction.S; break;
         }
     }
 
     private void turnRight() {
         switch(direction) {
-            case N:
-                this.direction = Direction.E;
-                break;
-            case S:
-                this.direction = Direction.W;
-                break;
-            case E:
-                this.direction = Direction.S;
-                break;
-            case W:
-                this.direction = Direction.N;
-                break;
+            case N: this.direction = Direction.E; break;
+            case S: this.direction = Direction.W; break;
+            case E: this.direction = Direction.S; break;
+            case W: this.direction = Direction.N; break;
         }
     }
 
